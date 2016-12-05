@@ -3,7 +3,7 @@ layout: default
 ---
 
 {% for repository in site.github.public_repositories %}
-    {% assign url = repository.html_url | replace: 'https://github.com/', '' %}
+    {% assign url = repository.html_url | replace: 'https://github.com/' + repository.owner.login + '/', '' %}
     {{ url }}
     <br>
 {% endfor %}
