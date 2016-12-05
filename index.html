@@ -2,8 +2,12 @@
 layout: default
 ---
 
+plos
+
 {% for repository in site.github.public_repositories %}
-    {{ 'https://github.com/' + repository.owner.login + '/' }}
+    {{ repository.owner }}
+    <!-- {{ 'https://github.com/' + repository.owner.login + '/' }} -->
+    }
 <!--     {% assign url = repository.html_url | replace: 'https://github.com/' + repository.owner.login + '/', '' %}
     {{ url }} -->
     <br>
