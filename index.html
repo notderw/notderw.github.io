@@ -3,6 +3,7 @@ layout: default
 ---
 
 {% for repository in site.github.public_repositories %}
-    {{ repository }}
+    {% assign url = repository.html_url | split: repository.full_name %}
+    {{ url[1] }}
     <br>
 {% endfor %}
