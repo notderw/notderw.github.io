@@ -42,8 +42,149 @@ $on-laptop:        800px;
 
 
 // Import partials from `sass_dir` (defaults to `_sass`)
-@import
-       "base",
-       "layout",
-       "syntax-highlighting"
-;
+// @import
+//        // "base",
+//        // "layout",
+//        // "syntax-highlighting"
+// ;
+
+@import url(https://fonts.googleapis.com/css?family=Roboto+Mono:700);
+
+body {
+    background: #fafafa;
+}
+
+.c-max {
+    max-width: 1280px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    padding-left: 32px;
+    padding-right: 32px;
+}
+
+.logo {
+    display: inline-block;
+    height: 36px;
+}
+
+.logo svg {
+    display: block;
+    height: 100%;
+}
+
+.c-max:after {
+    display: block;
+    clear: both;
+    content: '';
+}
+
+.icon-list svg {
+    width: 24px;
+    height: 24px;
+}
+
+header {
+    height: 64px;
+    background: #03A9F4;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+
+header .logo {
+    margin: 14px 0;
+    fill: #fff;
+}
+
+header #nav {
+    display: inline-block;
+    line-height: 64px;
+    margin: 0;
+    float: right;
+}
+
+header #nav li {
+    display: inline-block;
+    vertical-align: top;
+    margin-left: -4px;
+    cursor: pointer;
+}
+
+header #nav li a {
+    display: block;
+    color: inherit;
+    font-family: "Roboto Mono",Roboto,sans-serif;
+    font-weight: bold;
+    font-size: 14px;
+    text-decoration: none;
+    letter-spacing: 0.25px;
+    padding: 0 12px;
+    height: 64px;
+    border-bottom: 2px solid transparent;
+    transition: border-bottom-color 0.1s ease-out;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+header #nav li a:hover {
+    border-bottom-color: rgba(255,255,255,.6);
+}
+
+#content {
+    min-height: 100vh;
+}
+
+.repo {
+    border-bottom: 1px solid rgba(0,0,0,.4);
+    margin: 20px 0;
+}
+
+.heading .title {
+    display: inline-block;
+    margin: 0;
+}
+
+.heading .stats {
+    display: inline-block;
+    float: right;
+    line-height: 30px;
+}
+
+.heading .stats span {
+    display: inline-block;
+    margin-left: 8px;
+}
+
+.heading .stats i {
+    vertical-align: middle;
+}
+
+footer {
+    margin-top: 160px;
+}
+
+footer #social {
+    float: right;
+}
+
+footer #social li {
+    display: inline-block;
+    height: 24px;
+    float: left;
+    margin: 8px 14px 8px 0;
+    padding: 0 10px 0 0;
+    text-align: center;
+}
+
+footer #social svg {
+    opacity: .54
+}
+
+footer .footer-suffix {
+    height: 144px;
+    min-height: 144px;
+    background: #fff;
+}
+
+footer .footer-suffix .logo {
+    margin: 54px 0;
+}
