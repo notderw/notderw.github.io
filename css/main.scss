@@ -64,13 +64,12 @@ body {
 }
 
 .logo {
-    display: inline-block;
-    height: 36px;
-}
+    fill: #fff;
 
-.logo svg {
-    display: block;
-    height: 100%;
+    svg {
+        display: block;
+        height: 100%;
+    }
 }
 
 .c-max:after {
@@ -87,52 +86,56 @@ body {
 header {
     position: relative;
     z-index: 999;
+    width: 100%;
     height: 64px;
     background: #03A9F4;
     box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
 
     .transparent-header & {
+        position: absolute;
         background: transparent;
+        box-shadow: none;
     }
-}
 
-header .logo {
-    margin: 14px 0;
-    fill: #fff;
-}
+    .logo {
+        display: inline-block;
+        height: 36px;
+        margin: 14px 0;
+    }
 
-header #nav {
-    display: inline-block;
-    line-height: 64px;
-    margin: 0;
-    float: right;
-}
+    #nav {
+        display: inline-block;
+        line-height: 64px;
+        margin: 0;
+        float: right;
 
-header #nav li {
-    display: inline-block;
-    vertical-align: top;
-    margin-left: -4px;
-    cursor: pointer;
-}
+        li {
+            display: inline-block;
+            vertical-align: top;
+            margin-left: -4px;
+            cursor: pointer;
 
-header #nav li a {
-    display: block;
-    color: inherit;
-    font-family: "Roboto Mono",Roboto,sans-serif;
-    font-weight: bold;
-    font-size: 14px;
-    text-decoration: none;
-    letter-spacing: 0.25px;
-    padding: 0 12px;
-    height: 64px;
-    border-bottom: 2px solid transparent;
-    transition: border-bottom-color 0.1s ease-out;
-    text-transform: uppercase;
-    color: #fff;
-}
+            a {
+                display: block;
+                color: inherit;
+                font-family: "Roboto Mono",Roboto,sans-serif;
+                font-weight: bold;
+                font-size: 14px;
+                text-decoration: none;
+                letter-spacing: 0.25px;
+                padding: 0 12px;
+                height: 64px;
+                border-bottom: 2px solid transparent;
+                transition: border-bottom-color 0.1s ease-out;
+                text-transform: uppercase;
+                color: #fff;
 
-header #nav li a:hover {
-    border-bottom-color: rgba(255,255,255,.6);
+                &:hover {
+                    border-bottom-color: rgba(255,255,255,.6);
+                }
+            }
+        }
+    }
 }
 
 #content {
@@ -144,55 +147,57 @@ header #nav li a:hover {
     margin: 20px 0;
 }
 
-.heading .title {
-    display: inline-block;
-    margin: 0;
-}
+.heading {
+    .title {
+        display: inline-block;
+        margin: 0;
+    }
 
-.heading .stats {
-    display: inline-block;
-    float: right;
-    line-height: 30px;
-}
+    .stats {
+        display: inline-block;
+        float: right;
+        line-height: 30px;
 
-.heading .stats span {
-    display: inline-block;
-    margin-left: 8px;
-}
+        span {
+            display: inline-block;
+            margin-left: 8px;
+        }
 
-.heading .stats i {
-    vertical-align: middle;
+        i {
+            vertical-align: middle;
+        }
+    }
 }
 
 footer {
     margin-top: 160px;
-}
 
-footer #social {
-    float: right;
-}
+    #social {
+        float: right;
 
-footer #social li {
-    display: inline-block;
-    height: 24px;
-    float: left;
-    margin: 8px 14px 8px 0;
-    padding: 0 10px 0 0;
-    text-align: center;
-}
+        li {
+            display: inline-block;
+            height: 24px;
+            float: left;
+            margin: 8px 14px 8px 0;
+            padding: 0 10px 0 0;
+            text-align: center;
+        }
 
-footer #social svg {
-    opacity: .54
-}
+        svg {
+            opacity: .54
+        }
+    }
 
-footer .footer-suffix {
-    height: 144px;
-    min-height: 144px;
-    background: #fff;
-}
+    .footer-suffix {
+        height: 144px;
+        min-height: 144px;
+        background: #fff;
 
-footer .footer-suffix .logo {
-    margin: 54px 0;
+        .logo {
+            margin: 54px 0;
+        }
+    }
 }
 
 #landing {
@@ -220,34 +225,33 @@ footer .footer-suffix .logo {
     }
 }
 
-#logo {
-    display: inline-block;
-    position: absolute;
-    font-size: 0;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+#landing {
+    display: flex;
+    justify-content: center;
 
-    z-index: -1;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
+    .logo {
+        position: relative;
+        align-self: center;
+        font-size: 0;
 
-    span {
-        font-family: 'Roboto Mono', monospace;
-        font-size: 128px;
-        line-height: 1.2;
-        padding: 0 38px;
-        text-transform: uppercase;
-        color: #fff;
-    }
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
 
-    svg {
-        display: block;
-        height: 20vh;
-        max-width: 80vw;
-        min-height: 256px;
-        fill: #fff;
+        span {
+            font-family: 'Roboto Mono', monospace;
+            font-size: 128px;
+            line-height: 1.2;
+            padding: 0 38px;
+            text-transform: uppercase;
+            color: #fff;
+        }
+
+        svg {
+            height: 20vh;
+            max-width: 80vw;
+            min-height: 256px;
+        }
     }
 }
