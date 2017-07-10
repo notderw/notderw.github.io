@@ -1,25 +1,19 @@
----
-layout: default
----
+<!DOCTYPE html>
+<html>
 
-<!-- {{ site }} -->
+    {% include head.html %}
 
-<div class='container'>
-    <h4>Repositories</h4>
-    {% for repo in site.github.public_repositories %}
-        <div class="repo">
-            <div class='heading'>
-                <h5 class='title'><a href="{{ repo.html_url }}" target="_blank">{{ repo.name }}</a></h5>
-                <div class="stats">
-                    <span><i class="material-icons">stars</i> {{ repo.stargazers_count }}</span>
-                    <span><i class="material-icons">remove_red_eye</i> {{ repo.watchers_count }}</span>
-                    <span><i class="material-icons">call_split</i> {{ repo.forks_count }}</span>
-                </div>
+    <body class="transparent-header">
+        <div id="landing">
+
+            {% include header.html %}
+
+            <div id='logo'>
+                {{ include logo.svg }}
             </div>
-            {% if repo.description %}
-            <p>{{ repo.description }}</p>
-            {% endif %}
-            <p>Last updated on {{ repo.updated_at | date_to_long_string }}</p>
         </div>
-    {% endfor %}
-</div>
+
+        {% include footer.html %}
+
+    </body>
+</html>
