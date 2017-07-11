@@ -3,11 +3,11 @@
         <a class="logo" href="{{site.baseurl }}">{% include logo.svg %}</a>
 
         <ul id='nav'>
-            <li><a class="{% if page.url == '/index.html'%}active{% endif %}" href="/">Home</a></li>
+            <!-- <li><a class="{% if page.url == '/index.html'%}active{% endif %}" href="/">Home</a></li> -->
 
             {% for node in site.pages %}
                 {% if node.title %}
-                    <li><a class="{% if page.url == node.url %}active{% endif %}" href="{{ node.url | prepend: site.baseurl }}">{{ node.title }}</a></li>
+                    <li><a class="{% if page.url == node.url %}active{% endif %}" href="{{ node.url | replace:'index.html','' | prepend: site.baseurl }}">{{ node.title }}</a></li>
                 {% endif %}
             {% endfor %}
         </ul>
