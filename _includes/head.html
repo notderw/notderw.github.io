@@ -2,14 +2,16 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width initial-scale=1" />
 
-    <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
+    <link href="/favicon.png" rel="icon" type="image/x-icon" />
+
+    <title>{{ site.title }} {% if page.title %} // {{ page.title }}{% endif %}</title>
     <meta name="description" content="{{ site.description }}">
 
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="//cdn.muicss.com/mui-0.9.17/css/mui.min.css" rel="stylesheet" type="text/css" />
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/css/materialize.min.css">
     <link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl }}">
     <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </head>
