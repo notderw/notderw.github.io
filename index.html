@@ -8,8 +8,6 @@
         body {
             display: flex;
             flex-direction: column;
-            justify-content: center;
-            align-items: center;
             height: 100vh;
             margin: 0;
             background: #212121;
@@ -17,6 +15,17 @@
             font-size: 0.8rem;
             font-family: Inconsolata;
             -webkit-font-smoothing: antialiased;
+        }
+
+        body > div {
+            display: flex;
+        }
+
+        #😎 {
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            flex-grow: 1
         }
 
         pre {
@@ -32,41 +41,47 @@
 
         a:visited {color: #880E4F}
 
-        #buttocks {
-            align-self: flex-end;
-            position: absolute;
-            bottom: 0;
+        #🍑 {
             padding: 12px;
+            justify-content: space-between;
         }
 
-        #buttocks a {
+        #🍑 a {
             color: #111;
         }
         </style>
     </head>
     <body>
-        <pre>
-_________
-______  /______________      __
-_  __  /_  _ \_  ___/_ | /| / /
-/ /_/ / /  __/  /   __ |/ |/ /
-\__,_/  \___//_/   _____/|__/
-        </pre>
-        <span>
-            <a href="https://twitter.com/notderw" target="_blank">twitter</a>
-            \\
-            <a href="https://github.com/notderw" target="_blank">github</a>
-            \\
-            <a href="https://pastebin.com/u/notderw" target="_blank">pastebin</a>
-            \\
-            <a href="https://keybase.io/derw" target="_blank">keybase</a>
-            \\
-            <a href="https://stackoverflow.com/users/4984749/derw" target="_blank">stack overflow</a>
-            \\
-            <a href="https://open.spotify.com/user/1254959480/playlist/785NCleXILdCQgqOysN2Wv?si=V4A8i0g4S5SIvxWL4tHWiA" target="_blank">spotify</a>
-        </span>
-        <span id="buttocks">
-            <a href="https://discord.derw.xyz">Δ</a>
-        </span>
+        <div id="😎">
+            <pre>
+    _________
+    ______  /______________      __
+    _  __  /_  _ \_  ___/_ | /| / /
+    / /_/ / /  __/  /   __ |/ |/ /
+    \__,_/  \___//_/   _____/|__/
+            </pre>
+            <span>
+                <a href="https://twitter.com/notderw" target="_blank">twitter</a>
+                \\
+                <a href="https://github.com/notderw" target="_blank">github</a>
+                \\
+                <a href="https://pastebin.com/u/notderw" target="_blank">pastebin</a>
+                \\
+                <a href="https://keybase.io/derw" target="_blank">keybase</a>
+                \\
+                <a href="https://stackoverflow.com/users/4984749/derw" target="_blank">stack overflow</a>
+                \\
+                <a href="https://open.spotify.com/user/1254959480/playlist/785NCleXILdCQgqOysN2Wv?si=V4A8i0g4S5SIvxWL4tHWiA" target="_blank">spotify</a>
+            </span>
+        </div>
+        <div id="🍑">
+            <span class="left cheek">
+                <a href="https://derw.pw">pw</a>
+                <a href="https://derw.wtf">wtf</a>
+            </span>
+            <span class="right cheek">
+                <a href="https://derw.wtf/discord">Δ</a>
+            </span>
+        </div>
     </body>
 </html>
